@@ -1,0 +1,15 @@
+[submodule "basalt_vio_ros2_msgs"]
+	path = basalt_vio_ros2_msgs
+	url = https://github.com/berndpfrommer/basalt_vio_ros2_msgs.git
+[submodule "basalt_vio_ros1_msgs"]
+	path = basalt_vio_ros1_msgs
+	url = https://github.com/berndpfrommer/basalt_vio_ros1_msgs.git
+[submodule "basalt_ros1"]
+	path = basalt_ros1
+	url = https://github.com/berndpfrommer/basalt_ros1.git
+[submodule "basalt_ros2"]
+	path = basalt_ros2
+	url = https://github.com/berndpfrommer/basalt_ros2.git
+[submodule "basalt-mirror"]
+	path = basalt
+	url = https://github.com/berndpfrommer/basalt-mirror.git
