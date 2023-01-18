@@ -1,0 +1,8 @@
+repositories:
+  src/basalt:
+    type: git
+#    submodule: --recursive
+    submodules: recursive
+    url: git@github.com:berndpfrommer/basalt.git
+    version: with_package_file
+ 
