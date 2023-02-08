@@ -1,8 +1,10 @@
 repositories:
   src/basalt:
     type: git
-#    submodule: --recursive
-    submodules: recursive
-    url: git@github.com:berndpfrommer/basalt.git
+    url: https://github.com/berndpfrommer/basalt.git
     version: with_package_file
+  src/basalt_vio_msgs:
+    type: git
+    url: https://github.com/berndpfrommer/basalt_vio_msgs.git
+    version: master
  
