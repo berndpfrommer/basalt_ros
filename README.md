@@ -14,12 +14,21 @@ Continuous integration testing on:
 
 ## How to install
 
+### Install dependencies
+
+The following apt packages must be installed on top of the ROS2 base
+image:
+```
+sudo apt-get install libbz2-dev
+```
+
 ### Clone this repo
 
     cd top_of_your_workspace
 	mkdir src  # (if not already there)
     git clone https://github.com/berndpfrommer/basalt_ros.git ./src/basalt_ros
 	# now fetch the dependencies (including the basalt repository etc)
+	# (this can take a while, patience)
     vcs import --recursive < src/basalt_ros/basalt_ros.repos
 
 ### Building
