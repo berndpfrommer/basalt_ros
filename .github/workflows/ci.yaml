@@ -1,0 +1,27 @@
+#
+# continuous integration workflow
+#
+name: continuous integration
+
+on:
+ push:
+    branches: [ master]
+ pull_request:
+    branches: [ master]
+ workflow_dispatch:
+    branches: [ master]
+
+jobs:
+  build_jammy_humble:
+    runs-on: ubuntu-22.04
+    name: ROS2 humble on Ubuntu Jammy (22.04)
+    container:
+      image: berndpfrommer/humble_jammy_basalt
+    steps:
+      - name: check out github repo
+        uses: actions/checkout@v3
+        with:
+          path: src/basalt_ros
+          fetch-depth: 0
+      - name: compile from source and test
+        run: ./src/basalt_ros/.github/scripts/build_and_test.bash
