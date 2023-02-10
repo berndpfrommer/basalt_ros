@@ -1,0 +1,10 @@
+FROM ros:humble-perception-jammy
+LABEL maintainer="bernd.pfrommer@gmail.com"
+LABEL version="1.0"
+LABEL description="jammy/humble image for basalt testing"
+ARG DEBIAN_FRONTEND=noninteractive
+
+RUN apt-get update
+
+RUN apt-get -y install libfmt-dev libbz2-dev ros-humble-ament-cmake-clang-format
+
