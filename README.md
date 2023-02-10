@@ -20,6 +20,7 @@ The following apt packages must be installed on top of the ROS2 base
 image:
 ```
 sudo apt-get install libbz2-dev
+sudo apt-get install ros-humble-ament-cmake-clang-format
 ```
 
 ### Clone this repo
@@ -30,6 +31,7 @@ sudo apt-get install libbz2-dev
 	# now fetch the dependencies (including the basalt repository etc)
 	# (this can take a while, patience)
     vcs import --recursive < src/basalt_ros/basalt_ros.repos
+    vcs import --recursive < src/basalt_wrapper/basalt_wrapper.repos
 
 ### Building
 
