@@ -65,7 +65,9 @@ class VIOBackEndNode : public rclcpp::Node
 {
 public:
   explicit VIOBackEndNode(const rclcpp::NodeOptions & options)
-  : Node("vio_backend", options)
+  : Node(
+      "vio_backend", rclcpp::NodeOptions(options)
+                       .automatically_declare_parameters_from_overrides(true))
   {
     backend_ = std::make_shared<VIOBackEnd>(this);
   }
