@@ -34,9 +34,7 @@ public:
   typedef message_filters::Synchronizer<SyncPolicy> Sync;
 
   explicit VizFlow(const rclcpp::NodeOptions & options)
-  : Node(
-      "viz_flow", rclcpp::NodeOptions(options)
-                    .automatically_declare_parameters_from_overrides(true))
+  : Node("viz_flow", rclcpp::NodeOptions(options))
 
   {
     sync_ = std::make_shared<Sync>(10);
