@@ -76,10 +76,8 @@ VIOPublisher::VIOPublisher(rclcpp::Node * node) : node_(node)
           0.00, 0.00, 0.00, 0.01, 0.00, 0.00, 0.00, 0.00, 0.00,
           0.00, 0.01, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.01};
 
-  node_->get_parameter_or<std::string>(
-    "world_frame_id", msg_.header.frame_id, "world");
-  node_->get_parameter_or<std::string>(
-    "odom_frame_id", msg_.child_frame_id, "odom");
+  msg_.header.frame_id = node_->declare_parameter("world_frame_id", "world");
+  msg_.child_frame_id = node_->declare_parameter("odom_frame_id", "odom");
 
   std::vector<double> ext_trans = {0, 0, 0};
   std::vector<double> ext_q = {1.0, 0, 0, 0};

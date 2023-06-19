@@ -52,9 +52,7 @@ class VIOFrontEndNode : public rclcpp::Node
 {
 public:
   explicit VIOFrontEndNode(const rclcpp::NodeOptions & options)
-  : Node(
-      "vio_frontend", rclcpp::NodeOptions(options)
-                        .automatically_declare_parameters_from_overrides(true))
+  : Node("vio_frontend", rclcpp::NodeOptions(options))
   {
     frontend_ = std::make_shared<VIOFrontEnd>(this);
   }
