@@ -1,4 +1,11 @@
-# Basalt ROS: ROS2 wrapper for Basalt VIO
+# INACTIVE: Basalt ROS: ROS2 wrapper for Basalt VIO
+
+
+NOTE: due to lack of time this repo is currently unsupported, meaning
+issues will be left unaddressed. Sorry!
+
+# ----------------------------
+
 
 This repo has a ROS2 wrapper for the
 [Basalt VIO library](https://gitlab.com/VladyslavUsenko/basalt/). ROS1
